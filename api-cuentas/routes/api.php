@@ -10,6 +10,8 @@ use App\Http\controllers\TransactionController;
 Route::resource('accounts', AccountsController::class);
 Route::resource('category', CategoryController::class);
 Route::resource('transaction', TransactionController::class);
+Route::post('changeStatus',[AccountsController::class,'changeStatus']);
+Route::post('changeStatus',[CategoryController::class,'changeStatus']);
 
 
 Route::get('/user', function (Request $request) {
